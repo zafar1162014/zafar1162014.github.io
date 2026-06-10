@@ -52,9 +52,9 @@ export function HeroSection() {
 								<span className="gradient-text block">Zafar Ul Haq</span>
 							</h1>
 							<p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-								Portfolio focused on Protons EduVerse, applied machine
-								learning, NLP, computer vision, semantic search, and FastAPI
-								applications.
+								AI/ML-focused project builder with hands-on work in machine
+								learning, NLP, computer vision, semantic search, RAG-based
+								features, and FastAPI applications.
 							</p>
 						</div>
 
