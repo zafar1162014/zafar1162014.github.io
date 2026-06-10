@@ -43,7 +43,7 @@ export function HeroSection() {
 					<div className="space-y-8">
 						<div className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/60 px-4 py-2 text-xs font-medium uppercase tracking-[0.28em] text-muted-foreground backdrop-blur-xl">
 							<Sparkles className="h-4 w-4 text-primary" />
-							Available for portfolio collaborations
+							Applied AI Portfolio
 						</div>
 
 						<div className="space-y-5">
