@@ -21,7 +21,7 @@ const researchPublications = [
 	{
 		title: 'Redefining Object Detection: Harnessing Advanced Techniques',
 		journal: 'ResearchGate',
-		year: '2024',
+		year: '2025',
 		description:
 			'Comprehensive research on harnessing the full potential of YOLO for real-time object detection, exploring advanced optimization techniques and deployment strategies.',
 		link: 'https://www.researchgate.net/publication/390115067_Redefining_Object_Detection_Harnessing_the_Full_Potential_of_YOLO',
