@@ -197,20 +197,21 @@ export function HeroSection() {
 									<div className="rounded-2xl border border-border/70 bg-secondary/60 p-4">
 										<div className="flex items-center gap-2 text-sm font-medium text-foreground">
 											<BrainCircuit className="h-4 w-4 text-primary" />
-											NLP & RAG
+											Advanced RAG
 										</div>
 										<p className="mt-2 text-sm text-muted-foreground">
-											Semantic search, embeddings, SOP/LOR generation, and AI
-											assistants.
+											Semantic search, embeddings, retrieval pipelines, and
+											context-aware AI assistants.
 										</p>
 									</div>
 									<div className="rounded-2xl border border-border/70 bg-secondary/60 p-4">
 										<div className="flex items-center gap-2 text-sm font-medium text-foreground">
 											<Camera className="h-4 w-4 text-accent" />
-											Computer Vision
+											ML & Generative AI
 										</div>
 										<p className="mt-2 text-sm text-muted-foreground">
-											Classification, object detection, and applied ML research.
+											Machine learning models, generative AI workflows, and
+											practical automation features.
 										</p>
 									</div>
 								</div>
