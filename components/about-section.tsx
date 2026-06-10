@@ -87,7 +87,7 @@ export function AboutSection() {
 							<span className="text-primary font-semibold">
 								100% Merit Scholarship Holder
 							</span>{' '}
-							| CGPA: 3.8+/4.00
+							| CGPA: 3.8/4.00
 						</p>
 						<p className="text-muted-foreground leading-relaxed">
 							Technologies and skills I work with:

@@ -80,7 +80,7 @@ const education = [
 		degree: 'BS Computer Science',
 		institution: 'University of Central Punjab',
 		date: '2022 – 2026',
-		details: 'CGPA: 3.8+/4.00',
+		details: 'CGPA: 3.8/4.00',
 	},
 	{
 		degree: 'FSc Pre-Engineering',

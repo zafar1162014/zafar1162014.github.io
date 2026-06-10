@@ -12,7 +12,6 @@ import {
 	Sparkles,
 	BrainCircuit,
 	Camera,
-	FileCode,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -158,13 +157,25 @@ export function HeroSection() {
 						<div className="glass-surface overflow-hidden rounded-[2rem] p-4 md:p-5">
 							<div className="rounded-[1.5rem] border border-border/70 bg-background/70 p-4 md:p-5">
 								<div className="flex items-center justify-between gap-4 pb-4">
-									<div>
-										<p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-											Featured Profile
-										</p>
-										<h2 className="mt-2 text-2xl font-semibold text-foreground">
-											AI/ML builder
-										</h2>
+									<div className="flex items-center gap-3">
+										<div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-border/70 bg-background/70 shadow-lg shadow-primary/10">
+											<Image
+												src={withBasePath('/profile.png')}
+												alt="Muhammad Zafar Ul Haq"
+												fill
+												sizes="64px"
+												className="object-cover"
+												priority
+											/>
+										</div>
+										<div>
+											<p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
+												Muhammad Zafar Ul Haq
+											</p>
+											<p className="mt-1 text-sm font-medium text-foreground">
+												AI/ML builder
+											</p>
+										</div>
 									</div>
 									<div className="rounded-full border border-border/80 bg-secondary/70 px-3 py-1.5 text-xs font-medium text-foreground">
 										Lahore, Pakistan
@@ -205,16 +216,6 @@ export function HeroSection() {
 									</div>
 								</div>
 
-								<div className="mt-4 rounded-2xl border border-border/70 bg-card/70 p-4">
-									<div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-muted-foreground">
-										<FileCode className="h-4 w-4 text-primary" />
-										Current flagship
-									</div>
-									<p className="mt-2 text-sm text-foreground">
-										Protons EduVerse combines university discovery, scholarship
-										search, and admissions support in one product.
-									</p>
-								</div>
 							</div>
 						</div>
 					</div>
