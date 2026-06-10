@@ -8,63 +8,80 @@ import {
 	Mail,
 	ChevronDown,
 	Download,
+	ArrowUpRight,
+	Sparkles,
+	BrainCircuit,
+	Camera,
+	FileCode,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { withBasePath } from '@/lib/base-path';
 
+const highlights = [
+	{ label: 'AI/ML', value: 'Machine Learning' },
+	{ label: 'NLP', value: 'Semantic Search' },
+	{ label: 'CV', value: 'Computer Vision' },
+];
+
+const featured = [
+	'FastAPI + Next.js',
+	'RAG workflows',
+	'Protons EduVerse',
+];
+
 export function HeroSection() {
 	return (
 		<section
 			id="home"
-			className="relative min-h-screen flex items-center overflow-hidden pt-20">
-			<div className="absolute inset-0 -z-10">
-				<div className="absolute left-[-8rem] top-16 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
-				<div className="absolute right-[-6rem] bottom-20 h-80 w-80 rounded-full bg-accent/35 blur-3xl" />
-			</div>
+			className="relative overflow-hidden pt-28 md:pt-32">
+			<div className="absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[linear-gradient(135deg,rgba(56,189,248,0.18),transparent_34%,transparent_66%,rgba(249,115,22,0.16))]" />
+			<div className="absolute inset-x-0 top-[28rem] -z-10 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
 
-			<div className="section-shell py-20">
-				<div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-					{/* Left: Text Content */}
-					<div className="max-w-2xl float-in">
-						<h1 className="text-5xl sm:text-6xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-[0.95] mb-6">
-							Muhammad
-							<br />
-							Zafar Ul Haq
-						</h1>
-						<h2 className="text-xl sm:text-2xl md:text-2xl text-muted-foreground mb-6 max-w-3xl">
-							Machine Learning Engineer
-						</h2>
-						<p className="text-muted-foreground max-w-2xl mb-10 text-base sm:text-lg leading-relaxed">
-							Machine Learning Engineer with a strong foundation in Computer
-							Science and a solid math background. Skilled in Machine Learning,
-							Deep Learning, NLP, and Computer Vision. Experienced in designing,
-							implementing, and deploying ML/DL models, handling large datasets,
-							and delivering client-focused AI solutions. Strong problem-solving
-							skills, capable of tackling complex computational challenges and
-							creating innovative AI applications.
-						</p>
+			<div className="section-shell py-12 md:py-16">
+				<div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+					<div className="space-y-8">
+						<div className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/60 px-4 py-2 text-xs font-medium uppercase tracking-[0.28em] text-muted-foreground backdrop-blur-xl">
+							<Sparkles className="h-4 w-4 text-primary" />
+							Open for portfolio work
+						</div>
 
-						<div className="flex flex-wrap gap-4 mb-12">
+						<div className="space-y-5">
+							<h1 className="max-w-4xl text-5xl font-semibold leading-[0.92] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+								<span className="block">Muhammad</span>
+								<span className="gradient-text block">Zafar Ul Haq</span>
+							</h1>
+							<p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+								AI/ML project builder focused on machine learning, NLP,
+								computer vision, semantic search, and FastAPI applications.
+								Current work spans Protons EduVerse, RAG-driven workflows, and
+								education-focused AI tools.
+							</p>
+						</div>
+
+						<div className="flex flex-wrap gap-3">
 							<Button
 								asChild
 								size="lg"
-								className="gap-2 rounded-full px-7">
-								<Link href="#projects">Explore Projects</Link>
+								className="gap-2 rounded-full bg-gradient-to-r from-primary via-cyan-400 to-accent px-6 text-primary-foreground shadow-lg shadow-primary/20 hover:scale-[1.01]">
+								<Link href="#projects">
+									Explore Projects
+									<ArrowUpRight className="h-4 w-4" />
+								</Link>
 							</Button>
 							<Button
 								asChild
 								variant="outline"
 								size="lg"
-								className="gap-2 rounded-full px-7 bg-transparent">
+								className="gap-2 rounded-full border-border/80 bg-background/70 px-6">
 								<Link href="#contact">Let&apos;s Connect</Link>
 							</Button>
 							<Button
 								asChild
 								variant="secondary"
 								size="lg"
-								className="gap-2 rounded-full px-7">
+								className="gap-2 rounded-full border border-border/80 bg-secondary/70 px-6">
 								<a
 									href={withBasePath('/resume.pdf')}
 									download="Muhammad-Zafar-Resume.pdf">
@@ -74,55 +91,131 @@ export function HeroSection() {
 							</Button>
 						</div>
 
-						<div className="flex items-center gap-4 sm:gap-6">
+						<div className="grid gap-3 sm:grid-cols-3">
+							{highlights.map((item) => (
+								<div
+									key={item.label}
+									className="rounded-2xl border border-border/80 bg-card/70 p-4 backdrop-blur-xl">
+									<p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
+										{item.label}
+									</p>
+									<p className="mt-2 text-sm font-medium text-foreground">
+										{item.value}
+									</p>
+								</div>
+							))}
+						</div>
+
+						<div className="flex flex-wrap gap-2">
+							{featured.map((item) => (
+								<span
+									key={item}
+									className="rounded-full border border-border/80 bg-card/70 px-3 py-1.5 text-sm text-muted-foreground backdrop-blur-xl">
+									{item}
+								</span>
+							))}
+						</div>
+
+						<div className="flex items-center gap-4 pt-2">
 							<Link
 								href="https://github.com/zafar1162014"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-11 h-11 rounded-full glass-surface flex items-center justify-center text-muted-foreground hover:text-primary transition-colors">
+								className="flex h-11 w-11 items-center justify-center rounded-full border border-border/80 bg-background/60 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
 								<Github className="h-5 w-5" />
 							</Link>
 							<Link
 								href="https://linkedin.com/in/mzafarulhaq"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-11 h-11 rounded-full glass-surface flex items-center justify-center text-muted-foreground hover:text-primary transition-colors">
+								className="flex h-11 w-11 items-center justify-center rounded-full border border-border/80 bg-background/60 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
 								<Linkedin className="h-5 w-5" />
 							</Link>
 							<Link
 								href="https://www.instagram.com/zafarulhaq1162014/"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-11 h-11 rounded-full glass-surface flex items-center justify-center text-muted-foreground hover:text-primary transition-colors">
+								className="flex h-11 w-11 items-center justify-center rounded-full border border-border/80 bg-background/60 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
 								<Instagram className="h-5 w-5" />
 							</Link>
 							<Link
 								href="https://www.facebook.com/zafarulhaq1162014/"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-11 h-11 rounded-full glass-surface flex items-center justify-center text-muted-foreground hover:text-primary transition-colors">
+								className="flex h-11 w-11 items-center justify-center rounded-full border border-border/80 bg-background/60 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
 								<Facebook className="h-5 w-5" />
 							</Link>
 							<Link
 								href="mailto:zafarulhaq1162014@gmail.com"
-								className="w-11 h-11 rounded-full glass-surface flex items-center justify-center text-muted-foreground hover:text-primary transition-colors">
+								className="flex h-11 w-11 items-center justify-center rounded-full border border-border/80 bg-background/60 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
 								<Mail className="h-5 w-5" />
 							</Link>
 						</div>
 					</div>
 
-					{/* Right: Profile Image */}
-					<div className="hidden md:flex items-center justify-center float-in">
-						<div className="relative w-full max-w-sm">
-							<div className="absolute inset-0 -z-10 bg-primary/20 blur-3xl rounded-2xl" />
-							<Image
-								src={withBasePath('/profile.png')}
-								alt="Muhammad Zafar Ul Haq"
-								width={400}
-								height={500}
-								className="w-full h-auto rounded-2xl object-cover shadow-2xl"
-								priority
-							/>
+					<div className="relative">
+						<div className="absolute inset-0 -z-10 rounded-[2rem] bg-[linear-gradient(145deg,rgba(56,189,248,0.28),rgba(251,191,36,0.18),rgba(168,85,247,0.22))] blur-2xl" />
+						<div className="glass-surface overflow-hidden rounded-[2rem] p-4 md:p-5">
+							<div className="rounded-[1.5rem] border border-border/70 bg-background/70 p-4 md:p-5">
+								<div className="flex items-center justify-between gap-4 pb-4">
+									<div>
+										<p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
+											Featured Profile
+										</p>
+										<h2 className="mt-2 text-2xl font-semibold text-foreground">
+											AI/ML builder
+										</h2>
+									</div>
+									<div className="rounded-full border border-border/80 bg-secondary/70 px-3 py-1.5 text-xs font-medium text-foreground">
+										Lahore, Pakistan
+									</div>
+								</div>
+
+								<div className="relative overflow-hidden rounded-[1.5rem] border border-border/70 bg-[linear-gradient(180deg,rgba(14,165,233,0.12),rgba(249,115,22,0.08))] p-4 shadow-2xl">
+									<div className="absolute inset-0 bg-[linear-gradient(135deg,transparent_0%,rgba(255,255,255,0.04)_50%,transparent_100%)]" />
+									<Image
+										src={withBasePath('/profile.png')}
+										alt="Muhammad Zafar Ul Haq"
+										width={760}
+										height={920}
+										className="relative z-10 w-full rounded-[1.25rem] object-cover shadow-2xl"
+										priority
+									/>
+								</div>
+
+								<div className="mt-4 grid gap-3 sm:grid-cols-2">
+									<div className="rounded-2xl border border-border/70 bg-secondary/60 p-4">
+										<div className="flex items-center gap-2 text-sm font-medium text-foreground">
+											<BrainCircuit className="h-4 w-4 text-primary" />
+											NLP & RAG
+										</div>
+										<p className="mt-2 text-sm text-muted-foreground">
+											Semantic search, embeddings, SOP/LOR generation, and AI
+											assistants.
+										</p>
+									</div>
+									<div className="rounded-2xl border border-border/70 bg-secondary/60 p-4">
+										<div className="flex items-center gap-2 text-sm font-medium text-foreground">
+											<Camera className="h-4 w-4 text-accent" />
+											Computer Vision
+										</div>
+										<p className="mt-2 text-sm text-muted-foreground">
+											Classification, object detection, and applied ML research.
+										</p>
+									</div>
+								</div>
+
+								<div className="mt-4 rounded-2xl border border-border/70 bg-card/70 p-4">
+									<div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-muted-foreground">
+										<FileCode className="h-4 w-4 text-primary" />
+										Current flagship
+									</div>
+									<p className="mt-2 text-sm text-foreground">
+										Protons EduVerse combines university discovery, scholarship
+										search, and admissions support in one product.
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -130,8 +223,11 @@ export function HeroSection() {
 
 			<Link
 				href="#about"
-				className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce">
-				<ChevronDown className="h-8 w-8" />
+				className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full border border-border/80 bg-background/70 px-4 py-2 text-sm text-muted-foreground backdrop-blur-xl transition-colors hover:text-foreground">
+				<div className="flex items-center gap-2">
+					<ChevronDown className="h-4 w-4" />
+					<span>Scroll</span>
+				</div>
 			</Link>
 		</section>
 	);

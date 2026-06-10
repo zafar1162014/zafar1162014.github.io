@@ -125,7 +125,7 @@ export default function RootLayout({
 				/>
 				<meta
 					name="theme-color"
-					content="#000000"
+					content="#08111f"
 				/>
 				<link
 					rel="preconnect"
@@ -145,7 +145,7 @@ export default function RootLayout({
 				className={`${headingFont.variable} ${bodyFont.variable} font-sans antialiased`}>
 				<ThemeProvider
 					attribute="class"
-					defaultTheme="light"
+					defaultTheme="dark"
 					enableSystem
 					disableTransitionOnChange>
 					{children}

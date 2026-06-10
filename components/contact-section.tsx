@@ -74,7 +74,7 @@ export function ContactSection() {
 				</div>
 
 				<div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-					<div className="space-y-8 glass-surface p-6 md:p-8">
+					<div className="space-y-8 glass-surface p-6 md:p-8 bg-[linear-gradient(180deg,rgba(56,189,248,0.07),rgba(249,115,22,0.05))]">
 						<div>
 							<h3 className="text-xl font-semibold text-foreground mb-4">
 								{"Let's work together"}
@@ -88,7 +88,7 @@ export function ContactSection() {
 
 						<div className="space-y-4">
 							<div className="flex items-center gap-4 text-muted-foreground">
-								<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+								<div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 via-cyan-400/15 to-accent/20 flex items-center justify-center border border-border/70">
 									<Mail className="h-5 w-5 text-primary" />
 								</div>
 								<div>
@@ -102,7 +102,7 @@ export function ContactSection() {
 							</div>
 
 							<div className="flex items-center gap-4 text-muted-foreground">
-								<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+								<div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 via-cyan-400/15 to-accent/20 flex items-center justify-center border border-border/70">
 									<Phone className="h-5 w-5 text-primary" />
 								</div>
 								<div>
@@ -112,7 +112,7 @@ export function ContactSection() {
 							</div>
 
 							<div className="flex items-center gap-4 text-muted-foreground">
-								<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+								<div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 via-cyan-400/15 to-accent/20 flex items-center justify-center border border-border/70">
 									<MapPin className="h-5 w-5 text-primary" />
 								</div>
 								<div>
@@ -127,33 +127,33 @@ export function ContactSection() {
 								href="https://github.com/zafar1162014"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors">
+								className="w-12 h-12 bg-secondary/60 rounded-2xl flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors border border-border/60">
 								<Github className="h-5 w-5" />
 							</Link>
 							<Link
 								href="https://linkedin.com/in/mzafarulhaq"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors">
+								className="w-12 h-12 bg-secondary/60 rounded-2xl flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors border border-border/60">
 								<Linkedin className="h-5 w-5" />
 							</Link>
 							<Link
 								href="https://www.instagram.com/zafarulhaq1162014/"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors">
+								className="w-12 h-12 bg-secondary/60 rounded-2xl flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors border border-border/60">
 								<Instagram className="h-5 w-5" />
 							</Link>
 							<Link
 								href="https://www.facebook.com/zafarulhaq1162014/"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors">
+								className="w-12 h-12 bg-secondary/60 rounded-2xl flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors border border-border/60">
 								<Facebook className="h-5 w-5" />
 							</Link>
 							<Link
 								href="mailto:zafarulhaq1162014@gmail.com"
-								className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors">
+								className="w-12 h-12 bg-secondary/60 rounded-2xl flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors border border-border/60">
 								<Mail className="h-5 w-5" />
 							</Link>
 						</div>
@@ -161,7 +161,7 @@ export function ContactSection() {
 
 					<form
 						onSubmit={handleSubmit}
-						className="space-y-6 glass-surface p-6 md:p-8">
+					className="space-y-6 glass-surface p-6 md:p-8 bg-card/75">
 						<div className="grid sm:grid-cols-2 gap-4">
 							<div className="space-y-2">
 								<Label htmlFor="name">Name</Label>
@@ -173,7 +173,7 @@ export function ContactSection() {
 									onChange={handleChange}
 									autoComplete="name"
 									required
-									className="transition-all focus-visible:ring-2 focus-visible:ring-primary/60"
+									className="transition-all focus-visible:ring-2 focus-visible:ring-primary/60 bg-background/70"
 								/>
 							</div>
 							<div className="space-y-2">
@@ -187,7 +187,7 @@ export function ContactSection() {
 									onChange={handleChange}
 									autoComplete="email"
 									required
-									className="transition-all focus-visible:ring-2 focus-visible:ring-primary/60"
+									className="transition-all focus-visible:ring-2 focus-visible:ring-primary/60 bg-background/70"
 								/>
 							</div>
 						</div>
@@ -200,7 +200,7 @@ export function ContactSection() {
 								value={formData.subject}
 								onChange={handleChange}
 								required
-								className="transition-all focus-visible:ring-2 focus-visible:ring-primary/60"
+								className="transition-all focus-visible:ring-2 focus-visible:ring-primary/60 bg-background/70"
 							/>
 						</div>
 						<div className="space-y-2">
@@ -213,7 +213,7 @@ export function ContactSection() {
 								value={formData.message}
 								onChange={handleChange}
 								required
-								className="transition-all focus-visible:ring-2 focus-visible:ring-primary/60"
+								className="transition-all focus-visible:ring-2 focus-visible:ring-primary/60 bg-background/70"
 							/>
 						</div>
 						{submitState.type && (
@@ -230,7 +230,7 @@ export function ContactSection() {
 						)}
 						<Button
 							type="submit"
-							className="w-full gap-2 transition-transform hover:-translate-y-0.5"
+							className="w-full gap-2 transition-transform hover:-translate-y-0.5 bg-gradient-to-r from-primary via-cyan-400 to-accent text-primary-foreground shadow-lg shadow-primary/20"
 							disabled={isSubmitting}>
 							{isSubmitting ? (
 								'Sending...'

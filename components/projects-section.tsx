@@ -160,7 +160,7 @@ export function ProjectsSection() {
 					<div className="section-divider" />
 				</div>
 
-				<div className="glass-surface p-6 md:p-8 mb-12 border-primary/40">
+				<div className="glass-surface p-6 md:p-8 mb-12 border-primary/40 bg-[linear-gradient(180deg,rgba(56,189,248,0.08),rgba(249,115,22,0.06))]">
 					<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
 						<div>
 							<p className="text-xs tracking-[0.16em] uppercase text-primary mb-2">
@@ -170,7 +170,7 @@ export function ProjectsSection() {
 								{finalYearProject.title}
 							</h3>
 						</div>
-						<span className="text-sm font-semibold bg-primary/15 text-primary px-3 py-1.5 rounded-full w-fit">
+						<span className="text-sm font-semibold bg-gradient-to-r from-primary/20 via-cyan-400/15 to-accent/20 text-foreground px-3 py-1.5 rounded-full w-fit border border-border/80">
 							{finalYearProject.progress}
 						</span>
 					</div>
@@ -183,7 +183,7 @@ export function ProjectsSection() {
 						{finalYearProject.highlights.map((item) => (
 							<div
 								key={item}
-								className="bg-secondary/40 rounded-lg px-4 py-3 text-sm text-foreground">
+								className="bg-secondary/40 rounded-xl px-4 py-3 text-sm text-foreground border border-border/60">
 								{item}
 							</div>
 						))}
@@ -193,7 +193,7 @@ export function ProjectsSection() {
 						{finalYearProject.milestones.map((milestone) => (
 							<span
 								key={milestone}
-								className="text-xs sm:text-sm border border-border rounded-full px-3 py-1.5 text-muted-foreground bg-card/70">
+								className="text-xs sm:text-sm border border-border/80 rounded-full px-3 py-1.5 text-muted-foreground bg-card/70">
 								{milestone}
 							</span>
 						))}
@@ -210,7 +210,7 @@ export function ProjectsSection() {
 						{researchPublications.map((pub) => (
 							<div
 								key={pub.title}
-								className="glass-surface p-6 hover:border-primary/50 transition-colors">
+								className="glass-surface p-6 hover:border-primary/50 transition-colors bg-card/75">
 								<div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
 									<div className="flex-1">
 										<h4 className="text-lg font-semibold text-foreground mb-2">
@@ -247,7 +247,7 @@ export function ProjectsSection() {
 						{githubRepoGroups.map((group) => (
 							<div
 								key={group.category}
-								className="glass-surface p-6">
+								className="glass-surface p-6 bg-card/75">
 								<h4 className="text-lg font-semibold text-foreground mb-4">
 									{group.category}
 								</h4>
@@ -258,7 +258,7 @@ export function ProjectsSection() {
 											href={`https://github.com/zafar1162014/${repo}`}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="flex items-center justify-between rounded-md px-3 py-2 bg-secondary/40 hover:bg-secondary transition-colors">
+											className="flex items-center justify-between rounded-xl px-3 py-2.5 bg-secondary/40 hover:bg-secondary/70 transition-colors border border-transparent hover:border-primary/20">
 											<span className="text-sm text-foreground break-all">
 												{repo}
 											</span>
@@ -280,7 +280,7 @@ export function ProjectsSection() {
 						{importantProjects.map((project) => (
 							<div
 								key={project.title}
-								className="rounded-lg border border-border bg-secondary/30 px-4 py-3">
+								className="rounded-2xl border border-border/80 bg-secondary/30 px-4 py-3 backdrop-blur-xl">
 								<h4 className="text-sm sm:text-base font-semibold text-foreground mb-1">
 									{project.title}
 								</h4>
@@ -292,7 +292,7 @@ export function ProjectsSection() {
 					</div>
 				</div>
 
-				<div className="mt-8 glass-surface p-5 text-center">
+				<div className="mt-8 glass-surface p-5 text-center bg-card/75">
 					<p className="text-muted-foreground text-sm sm:text-base">
 						I have also completed lots of client projects across ML, data
 						analysis, web apps, and automation work.

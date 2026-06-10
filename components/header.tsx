@@ -41,53 +41,50 @@ export function Header() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
-	return (
+		return (
 		<header
 			className={cn(
 				'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
 				scrolled
-					? 'bg-background/80 backdrop-blur-xl border-b border-border/80 shadow-lg'
+					? 'bg-background/70 backdrop-blur-2xl border-b border-border/80 shadow-2xl'
 					: 'bg-transparent',
 			)}>
 			<nav className="container mx-auto px-6 py-4 flex items-center justify-between">
 				<Link
 					href="#home"
-					className="text-xl md:text-2xl font-semibold tracking-tight text-foreground">
-					MZH <span className="text-primary">Portfolio</span>
+					className="group inline-flex items-center gap-3 text-xl md:text-2xl font-semibold tracking-tight text-foreground">
+					<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-primary via-cyan-400 to-accent text-primary-foreground shadow-lg shadow-primary/20">
+						MZ
+					</span>
+					<span>
+						<span className="gradient-text">Muhammad Zafar</span>
+						<span className="block text-xs font-medium tracking-[0.24em] uppercase text-muted-foreground">
+							Portfolio
+						</span>
+					</span>
 				</Link>
 
-				<div className="hidden md:flex items-center gap-8">
+				<div className="hidden md:flex items-center gap-3 rounded-full border border-border/80 bg-background/60 px-3 py-2 backdrop-blur-xl">
 					{navLinks.map((link) => (
 						<Link
 							key={link.name}
 							href={link.href}
-							className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+							className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-colors">
 							{link.name}
 						</Link>
 					))}
-
-					<a
-						href={researchPaper.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="inline-flex items-center gap-2 text-sm px-3 py-2 rounded-full border border-border bg-card/70 hover:border-primary/60 transition-colors">
-						<FileText className="h-4 w-4 text-primary" />
-						{researchPaper.platform}
-						<ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
-					</a>
-
 					{mounted && (
 						<Button
 							variant="ghost"
 							onClick={() => setTheme(isDark ? 'light' : 'dark')}
-							className="ml-2 gap-2 rounded-full px-4"
+							className="ml-1 gap-2 rounded-full px-4 bg-secondary/60 hover:bg-secondary"
 							aria-label="Toggle night mode">
 							{isDark ? (
 								<Sun className="h-4 w-4" />
 							) : (
 								<Moon className="h-4 w-4" />
 							)}
-							<span className="text-xs font-medium">Night Mode</span>
+							<span className="text-xs font-medium">Theme</span>
 						</Button>
 					)}
 				</div>
@@ -116,26 +113,17 @@ export function Header() {
 			</nav>
 
 			{isOpen && (
-				<div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/80">
-					<div className="container mx-auto px-6 pb-5 flex flex-col gap-4">
+				<div className="md:hidden bg-background/95 backdrop-blur-2xl border-b border-border/80">
+					<div className="container mx-auto px-6 pb-5 pt-2 flex flex-col gap-4">
 						{navLinks.map((link) => (
 							<Link
 								key={link.name}
 								href={link.href}
-								className="text-muted-foreground hover:text-primary transition-colors py-1"
+								className="rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary/70 transition-colors"
 								onClick={() => setIsOpen(false)}>
 								{link.name}
 							</Link>
 						))}
-						<a
-							href={researchPaper.url}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="inline-flex w-fit items-center gap-2 text-sm px-3 py-2 rounded-full border border-border bg-card/70"
-							onClick={() => setIsOpen(false)}>
-							<FileText className="h-4 w-4 text-primary" />
-							View Publication ({researchPaper.year})
-						</a>
 						<button
 							type="button"
 							onClick={() => {
@@ -148,8 +136,18 @@ export function Header() {
 							) : (
 								<Moon className="h-4 w-4" />
 							)}
-							Night Mode
+							Theme
 						</button>
+						<a
+							href={researchPaper.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex w-fit items-center gap-2 text-sm px-3 py-2 rounded-full border border-border bg-card/70"
+							onClick={() => setIsOpen(false)}>
+							<FileText className="h-4 w-4 text-primary" />
+							{researchPaper.platform} {researchPaper.year}
+							<ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
+						</a>
 					</div>
 				</div>
 			)}

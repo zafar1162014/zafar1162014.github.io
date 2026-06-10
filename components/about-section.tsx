@@ -62,7 +62,7 @@ export function AboutSection() {
 				</div>
 
 				<div className="grid lg:grid-cols-2 gap-12">
-					<div className="space-y-6 glass-surface p-6 md:p-8">
+					<div className="space-y-6 glass-surface p-6 md:p-8 bg-[linear-gradient(180deg,rgba(56,189,248,0.06),rgba(249,115,22,0.04))]">
 						<p className="text-muted-foreground leading-relaxed">
 							I have a strong foundation in computer science, machine learning,
 							and data-driven problem solving. I have built hands-on projects
@@ -104,7 +104,7 @@ export function AboutSection() {
 						</ul>
 					</div>
 
-					<div className="space-y-8 glass-surface p-6 md:p-8">
+					<div className="space-y-8 glass-surface p-6 md:p-8 bg-card/75">
 						{Object.entries(skills).map(([category, items]) => (
 							<div key={category}>
 								<h3 className="text-lg font-semibold text-foreground mb-4">
@@ -114,7 +114,7 @@ export function AboutSection() {
 									{items.map((skill) => (
 										<span
 											key={skill}
-											className="text-xs sm:text-sm bg-secondary/65 border border-border/70 rounded-xl px-3 py-1.5 text-foreground">
+											className="text-xs sm:text-sm bg-secondary/65 border border-border/70 rounded-2xl px-3 py-1.5 text-foreground">
 											{skill}
 										</span>
 									))}

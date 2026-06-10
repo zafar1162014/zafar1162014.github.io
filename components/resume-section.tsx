@@ -243,16 +243,16 @@ export function ResumeSection() {
 
 				<div className="flex flex-col lg:flex-row gap-8 glass-surface p-4 md:p-6">
 					{/* Tab Navigation */}
-					<div className="lg:w-48 flex lg:flex-col gap-2 overflow-x-auto pb-2 lg:pb-0">
+					<div className="lg:w-56 flex lg:flex-col gap-2 overflow-x-auto pb-2 lg:pb-0">
 						{tabs.map((tab) => (
 							<button
 								key={tab.id}
 								onClick={() => setActiveTab(tab.id)}
 								className={cn(
-									'flex items-center gap-3 px-4 py-3 text-left text-sm font-medium transition-all whitespace-nowrap rounded-lg',
+									'flex items-center gap-3 px-4 py-3 text-left text-sm font-medium transition-all whitespace-nowrap rounded-2xl border border-transparent',
 									activeTab === tab.id
-										? 'bg-primary/10 text-primary border-l-2 border-primary'
-										: 'text-muted-foreground hover:text-foreground hover:bg-secondary',
+										? 'bg-gradient-to-r from-primary/20 via-cyan-400/15 to-accent/20 text-foreground border-primary/30 shadow-lg shadow-primary/10'
+										: 'text-muted-foreground hover:text-foreground hover:bg-secondary/70',
 								)}>
 								<tab.icon className="h-4 w-4 shrink-0" />
 								{tab.label}
@@ -260,7 +260,7 @@ export function ResumeSection() {
 						))}
 						<Button
 							variant="outline"
-							className="mt-4 gap-2 bg-transparent"
+							className="mt-4 gap-2 rounded-full border-primary/30 bg-background/60 text-foreground hover:bg-primary hover:text-primary-foreground"
 							asChild>
 							<a
 								href={withBasePath('/resume.pdf')}
@@ -278,8 +278,8 @@ export function ResumeSection() {
 								{experience.map((item, index) => (
 									<div
 										key={index}
-										className="relative pl-6 border-l-2 border-border">
-										<div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary" />
+										className="relative pl-6 border-l-2 border-primary/40">
+										<div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-accent shadow-md shadow-primary/20" />
 										<h3 className="text-lg font-semibold text-foreground">
 											{item.title}
 										</h3>
@@ -307,8 +307,8 @@ export function ResumeSection() {
 								{education.map((item, index) => (
 									<div
 										key={index}
-										className="relative pl-6 border-l-2 border-border">
-										<div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary" />
+										className="relative pl-6 border-l-2 border-primary/40">
+										<div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-accent shadow-md shadow-primary/20" />
 										<h3 className="text-lg font-semibold text-foreground">
 											{item.degree}
 										</h3>
@@ -327,7 +327,7 @@ export function ResumeSection() {
 								{certifications.map((cert, index) => (
 									<div
 										key={index}
-										className="p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors">
+										className="p-4 bg-card/80 border border-border/80 rounded-2xl hover:border-primary/50 transition-colors backdrop-blur-xl">
 										<div className="flex items-start gap-3">
 											<Award className="h-5 w-5 text-primary shrink-0 mt-0.5" />
 											<span className="text-sm text-muted-foreground">
@@ -344,7 +344,7 @@ export function ResumeSection() {
 								{awards.map((award, index) => (
 									<div
 										key={index}
-										className="p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors">
+										className="p-4 bg-card/80 border border-border/80 rounded-2xl hover:border-primary/50 transition-colors backdrop-blur-xl">
 										<div className="flex items-start gap-3">
 											<Trophy className="h-5 w-5 text-primary shrink-0 mt-0.5" />
 											<div>
@@ -366,7 +366,7 @@ export function ResumeSection() {
 								{leadership.map((item, index) => (
 									<div
 										key={index}
-										className="p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors">
+										className="p-4 bg-card/80 border border-border/80 rounded-2xl hover:border-primary/50 transition-colors backdrop-blur-xl">
 										<h3 className="text-lg font-semibold text-foreground">
 											{item.role}
 										</h3>
