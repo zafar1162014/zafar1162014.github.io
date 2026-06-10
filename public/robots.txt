@@ -15,7 +15,7 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 # Point to sitemap
-Sitemap: https://muhammadzafarulhaq.com/sitemap.xml
+Sitemap: https://zafar1162014.github.io/sitemap.xml
 
 # Standard crawlers: no delays
 User-agent: Googlebot

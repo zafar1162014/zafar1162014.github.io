@@ -25,14 +25,6 @@ const tabs = [
 
 const experience = [
 	{
-		title: 'Data Science Intern',
-		company: '10Pearls',
-		date: 'Mar 2026 – Present',
-		description: [
-			'Working on end-to-end data analysis, ML pipeline development, and model optimization for enterprise datasets.',
-		],
-	},
-	{
 		title: 'Teaching Assistant – OOP (C++) & PF (Programming Fundamentals)',
 		company: 'University of Central Punjab',
 		date: 'Oct 2025 – Present',
