@@ -52,9 +52,12 @@ export function HeroSection() {
 								<span className="gradient-text block">Zafar Ul Haq</span>
 							</h1>
 							<p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-								AI/ML-focused project builder with hands-on work in machine
-								learning, NLP, computer vision, semantic search, RAG-based
-								features, and FastAPI applications.
+								AI/ML-focused project builder with hands-on experience in
+								machine learning, NLP, computer vision, semantic search,
+								RAG-based features, and FastAPI applications. Strong programming
+								foundation in Python, C++, C, and SQL, with the ability to learn
+								quickly, solve problems, and build practical AI and software
+								solutions.
 							</p>
 						</div>
 
