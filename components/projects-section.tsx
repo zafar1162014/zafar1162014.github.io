@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const finalYearProject = {
 	title: 'Protons EduVerse',
-	progress: '70% Complete',
+	progress: 'Completed',
 	description:
 		'AI-powered study abroad platform for Pakistani students that unifies university search, SOP/LOR generation, admission prediction, test prep, and peer community support in one cloud-native product.',
 	highlights: [
@@ -14,10 +14,6 @@ const finalYearProject = {
 		'Transformer NLP for SOP/LOR generation',
 		'XGBoost models for admission prediction',
 		'JWT-based RBAC security framework with complete API/UML planning',
-	],
-	milestones: [
-		'Backend Implementation: April 2026',
-		'ML Training & Deployment: July 2026',
 	],
 };
 
@@ -189,15 +185,6 @@ export function ProjectsSection() {
 						))}
 					</div>
 
-					<div className="flex flex-wrap gap-2">
-						{finalYearProject.milestones.map((milestone) => (
-							<span
-								key={milestone}
-								className="text-xs sm:text-sm border border-border/80 rounded-full px-3 py-1.5 text-muted-foreground bg-card/70">
-								{milestone}
-							</span>
-						))}
-					</div>
 				</div>
 
 				{/* Research Publications Section */}
