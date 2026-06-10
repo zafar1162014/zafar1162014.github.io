@@ -3,8 +3,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Moon, Sun, FileText, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
+import { withBasePath } from '@/lib/base-path';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -53,8 +55,15 @@ export function Header() {
 				<Link
 					href="#home"
 					className="group inline-flex items-center gap-3 text-xl md:text-2xl font-semibold tracking-tight text-foreground">
-					<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-primary via-cyan-400 to-accent text-primary-foreground shadow-lg shadow-primary/20">
-						MZ
+					<span className="relative h-10 w-10 overflow-hidden rounded-2xl border border-border/70 bg-background/70 shadow-lg shadow-primary/20">
+						<Image
+							src={withBasePath('/profile.png')}
+							alt="Muhammad Zafar Ul Haq"
+							fill
+							sizes="40px"
+							className="object-cover"
+							priority
+						/>
 					</span>
 					<span>
 						<span className="gradient-text">Muhammad Zafar</span>

@@ -7,13 +7,13 @@ const finalYearProject = {
 	title: 'Protons EduVerse',
 	progress: 'Completed',
 	description:
-		'AI-powered study abroad platform for Pakistani students that unifies university search, SOP/LOR generation, admission prediction, test prep, and peer community support in one cloud-native product.',
+		'Complete study abroad operating platform for students, mentors, and administrators, combining university discovery, scholarship intelligence, SOP/LOR preparation, EduVerse AI, admission planning, test prep, timelines, document management, community, messaging, and subscriptions.',
 	highlights: [
-		'6 independent microservices in a cloud-native architecture',
-		'Hybrid data layer using MongoDB Atlas and PostgreSQL',
-		'Transformer NLP for SOP/LOR generation',
-		'XGBoost models for admission prediction',
-		'JWT-based RBAC security framework with complete API/UML planning',
+		'Next.js 16, React 19, TypeScript, Tailwind CSS, and Radix UI',
+		'FastAPI backend with PostgreSQL, pgvector, Redis, and Celery',
+		'Scholarship aggregation from 54 sources with semantic search',
+		'EduVerse AI chat, SOP/LOR generation, and admission prediction',
+		'Document hub, community, messaging, subscriptions, and admin console',
 	],
 };
 
